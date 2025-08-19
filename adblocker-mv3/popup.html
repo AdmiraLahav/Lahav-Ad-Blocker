@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ad Blocker</title>
+    <style>
+      body { font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif; margin: 12px; min-width: 260px; }
+      .row { display: flex; align-items: center; justify-content: space-between; margin: 8px 0; }
+      button, input[type="checkbox"] { cursor: pointer; }
+      .muted { color: #666; font-size: 12px; }
+      .link { color: #0b57d0; text-decoration: none; }
+      .link:hover { text-decoration: underline; }
+      .badge { display:inline-block; padding:2px 6px; border-radius:6px; background:#eee; font-size:12px; }
+    </style>
+  </head>
+  <body>
+    <h3 style="margin-top:0">Minimal Ad Blocker</h3>
+
+    <div class="row">
+      <div>Enabled</div>
+      <label>
+        <input id="enabled" type="checkbox" />
+      </label>
+    </div>
+
+    <div class="row">
+      <div>Network ruleset</div>
+      <div id="rulesetState" class="badge">checking…</div>
+    </div>
+
+    <div class="row">
+      <button id="toggleRuleset">Toggle ruleset</button>
+      <a class="link" href="options.html" target="_blank">Options</a>
+    </div>
+
+    <div class="muted">
+      Dynamic block rules: <span id="dynCount">0</span>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
